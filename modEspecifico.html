@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/content.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<title>Proyecto Final: IA</title>
+</head>
+
+<body>
+
+	<div class="sidebar close">
+		<div class="logo-details">
+			<i class='bx bx-brain'></i>
+			<span class="logo_name">IA</span>
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">
+					<i class='bx bx-book'></i>
+					<span class="link_name">Modulo General</span>
+				</a>
+				<ul class="sub-menu blank">
+					<li><a class="link_name" href="index.html">Modulo General</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="modEspecifico.html">
+					<i class='bx bx-book-bookmark'></i>
+					<span class="link_name">Modulo Específo</span>
+				</a>
+				<ul class="sub-menu blank">
+					<li><a class="link_name" href="modEspecifico.html">Modulo Específo</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-cool'></i>
+					<span class="link_name">Integrantes</span>
+				</a>
+				<ul class="sub-menu blank">
+					<li><a class="link_name" href="#">Integrantes</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<section class="home-section">
+		<div class="home-content">
+			<i class='bx bx-menu'></i>
+			<span class="text">Diagnóstico de enfermedades respiratorias aplicando Lógica Difusa</span>
+		</div>
+		<section class="contenido">
+			<h2>Modulo Específico</h2>
+			<h4 style="margin-bottom: 15px;">Ingresa la severidad de los sintomas que sientas: (si no tienes el sintoma
+				omitelo)</h4>
+
+			<p style="margin-bottom: 30px; padding-right: 100px;">
+				A diferencia del modulo general aquí podrás seleccionar alguna de las siguientes enfermedades para analizar las coincidencias
+				con la severidad de los sintomas ingresados.
+			</p>
+			<div
+				style="width: 850px; height: 100px; border: 1px solid gainsboro; border-radius: 4px; padding-top: 5px; padding-left: 15px;">
+				<h5>Medidas:</h5>
+				<p style="text-align: center;">
+					"🙂"=0, "😟"=1, "🥺"=2, "😖"=3, "😫"=4, "🤧"=5, "🤒"=6, "😭"=7, "🤮"=8, "🤢"=9, "😷"=10
+				</p>
+				<p style="text-align: center; margin-top: 10px;"> 1 a 3: leve, 3 a 6: Molesto, 6 a 8: Severo, 8 a 10: Grave</p>
+			</div>
+
+			<div class="campo" style="margin-top: 50px; margin-bottom: 30px;">
+				<label class="custom-field one">
+					<input type="text" placeholder=" " id="nombre_campo"/>
+					<span class="placeholder">Ingresa tu nombre</span>
+				</label>
+			</div>
+
+			<h2 style="margin-bottom: 25px;">Enfermedades:</h2>
+			<section class="enfermedades" style="margin-bottom: 30px; display: flex;">
+				<div class="row lists">
+					<p>
+						<input type="checkbox" id="test1" class="enfermedadCheck1"/>
+						<label for="test1">Gripe</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test2" class="enfermedadCheck2"/>
+						<label for="test2">Rinitis</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test3" class="enfermedadCheck3"/>
+						<label for="test3">Rinosinusitis</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test4" class="enfermedadCheck4"/>
+						<label for="test4">Faringitis</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test5" class="enfermedadCheck5"/>
+						<label for="test5">Amigdalitis</label>
+					</p>
+				</div>
+				<div class="row lists" style="padding-left: 70px;">
+					<p>
+						<input type="checkbox" id="test6" class="enfermedadCheck6"/>
+						<label for="test6">Bronquitis</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test7" class="enfermedadCheck7"/>
+						<label for="test7">Enfisema Pulmonar</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test8" class="enfermedadCheck8"/>
+						<label for="test8">Asma</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test9" class="enfermedadCheck9"/>
+						<label for="test9">Neumonía</label>
+					</p>
+					<p>
+						<input type="checkbox" id="test10" class="enfermedadCheck10"/>
+						<label for="test10">COVID-19</label>
+					</p>
+				</div>
+			</section>
+
+
+			<section style="display: flex;">
+				<div class="slider-container" style="width: 600px">
+					<span>Fiebre:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange1" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange1', 'slide1')">
+						<span class="range-slider__value" id="slide1">🙂</span>
+					</div>
+					<span>Tos seca:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange2" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange2', 'slide2')"">
+					<span class=" range-slider__value" id="slide2">🙂</span>
+					</div>
+					<span>Silibancia:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange3" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange3', 'slide3')"">
+					<span class=" range-slider__value" id="slide3">🙂</span>
+					</div>
+					<span>Dificultad para respirar:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange4" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange4', 'slide4')">
+						<span class="range-slider__value" id="slide4">🙂</span>
+					</div>
+					<span>Dolor de Cabeza:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange5" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange5', 'slide5')"">
+					<span class=" range-slider__value" id="slide5">🙂</span>
+					</div>
+					<span>Escalofríos:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange6" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange6', 'slide6')"">
+					<span class=" range-slider__value" id="slide6">🙂</span>
+					</div>
+					<span>Dolor muscular:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange7" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange7', 'slide7')">
+						<span class="range-slider__value" id="slide7">🙂</span>
+					</div>
+					<span>Cansancio:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange8" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange8', 'slide8')"">
+					<span class=" range-slider__value" id="slide8">🙂</span>
+					</div>
+					<span>Picor de Nariz:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange9" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange9', 'slide9')"">
+					<span class=" range-slider__value" id="slide9">🙂</span>
+					</div>
+					<span>Congestión Nasal:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange10" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange10', 'slide10')">
+						<span class="range-slider__value" id="slide10">🙂</span>
+					</div>
+					<span>Estornudos:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange11" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange11', 'slide11')"">
+					<span class=" range-slider__value" id="slide11">🙂</span>
+					</div>
+					<span>Ojos Llorosos:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange12" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange12', 'slide12')"">
+					<span class=" range-slider__value" id="slide12">🙂</span>
+					</div>
+					<span>Garganta Irritada:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange13" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange13', 'slide13')">
+						<span class="range-slider__value" id="slide13">🙂</span>
+					</div>
+					<span>Tos con flema:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange14" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange14', 'slide14')"">
+					<span class=" range-slider__value" id="slide14">🙂</span>
+					</div>
+					<span>Náuseas:</span>
+					<div class="range-slider">
+						<input class="range-slider__range" id="slideRange15" type="range" value="0" min="0" max="10"
+							onclick="test('slideRange15', 'slide15')"">
+					<span class=" range-slider__value" id="slide15">🙂</span>
+					</div>
+				</div>
+				
+				<div style="margin-left: 100px; margin-top: 40px; padding-top: 40px; padding-left: 30px; border: 1px solid gainsboro; width: 400px; height: 500px; border-radius: 15px; padding-right: 30px;">
+					<h3>Consideraciones:</h3>
+					<ul style="margin-left: 30px; margin-top: 20px;">
+						<li>
+							Sibilancias. Son un sonido silbante y chillón durante la respiración, que ocurre cuando el aire se desplaza a través de los conductos respiratorios estrechos en los pulmones.
+						</li>
+						<li>
+							Solo darle click a diagnosticar una vez que hayas ingresado tus sintomas.
+						</li>
+						<li>
+							Si no tienes uno de los sintomas, omitelo y deja el slider como esta.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<div class="item"
+				style="display: flexbox; flex-direction: column; align-items: center; justify-content: center;">
+				<button class="btn-outline" onclick="diagnostico()">Diagnosticar</button>
+			</div>
+			<section>
+				<h2>Hola <b id="nombre"></b></h2>
+				<p>El resultado del diagnostico es: </p>
+				<div class="resultadoCanv" id="resultadoCanv">
+				</div>
+				<div class="resultadoCanv" id="resultadoCanv2">
+				</div>
+			</section>
+
+		</section>
+	</section>
+	<script src="js/modEsp.js"></script>
+	<script>
+		function test(id, id2) {
+			var slider1 = document.getElementById(id).value
+			var valueSl = document.getElementById(id2)
+
+			const emoji = ["🙂", "😟", "🥺", "😖", "😫", "🤧", "🤒", "😭", "🤮", "🤢", "😷"]
+
+			switch (slider1) {
+				case "0":
+					valueSl.innerHTML = emoji[0]
+					break;
+				case "1":
+					valueSl.innerHTML = emoji[1]
+					break;
+				case "2":
+					valueSl.innerHTML = emoji[2]
+					break;
+				case "3":
+					valueSl.innerHTML = emoji[3]
+					break;
+				case "4":
+					valueSl.innerHTML = emoji[4]
+					break;
+				case "5":
+					valueSl.innerHTML = emoji[5]
+					break;
+				case "6":
+					valueSl.innerHTML = emoji[6]
+					break;
+				case "7":
+					valueSl.innerHTML = emoji[7]
+					break;
+				case "8":
+					valueSl.innerHTML = emoji[8]
+					break;
+				case "9":
+					valueSl.innerHTML = emoji[9]
+					break;
+				case "10":
+					valueSl.innerHTML = emoji[10]
+					break;
+				default:
+					valueSl.innerHTML = slider1
+					break;
+			}
+			console.log(valueSl)
+		};
+
+		let arrow = document.querySelectorAll(".arrow");
+		for (var i = 0; i < arrow.length; i++) {
+			arrow[i].addEventListener("click", (e) => {
+				let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+				arrowParent.classList.toggle("showMenu");
+			});
+		}
+		let sidebar = document.querySelector(".sidebar");
+		let sidebarBtn = document.querySelector(".bx-menu");
+		console.log(sidebarBtn);
+		sidebarBtn.addEventListener("click", () => {
+			sidebar.classList.toggle("close");
+		});
+
+		const inputs = document.querySelectorAll('input');
+
+		inputs.forEach(el => {
+			el.addEventListener('blur', e => {
+				if (e.target.value) {
+					e.target.classList.add('dirty');
+				} else {
+					e.target.classList.remove('dirty');
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
