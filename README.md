@@ -160,7 +160,7 @@ function compareResults(arr){
 
 _Clonar el proyecto, la aplicación es funcional en todos los navegadores de forma local_
 
-De igual manera también se puede acceder de forma web, mediante este [link](https://stoic-northcutt-40d2cf.netlify.app/index.html)
+De igual manera también se puede acceder de forma web, mediante este [link.](https://stoic-northcutt-40d2cf.netlify.app/index.html)
 
 <br/>
 
@@ -170,6 +170,9 @@ _La documentación completa de este proyecto se encuentra en drive mediante el s
 
 * [Documentación](https://docs.google.com/document/d/1njgqa94COHIL4qDd9gDQzQOmctfZPfvJfSWw7Ij4rao/edit?usp=sharing) - Aquí puedes descargar la documentación.
 
+_Se puede acceder al manual de usuario desde el siguiente link:_
+
+* [Manual de usuario](https://docs.google.com/presentation/d/1VsZn-2uSvFzGuVwhQP0KArn6gOPitaMt8T4wa9Ao034/edit?usp=sharing) - Aquí puedes descargar el manual de usuario.
 <br/>
 
 ## Imágenes 💻
