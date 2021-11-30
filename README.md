@@ -156,17 +156,41 @@ function compareResults(arr){
 }
 ```
 
-### Instalación 🔧
+## Instalación 🔧
 
 _Clonar el proyecto, la aplicación es funcional en todos los navegadores de forma local_
 
 De igual manera también se puede acceder de forma web, mediante este [link](https://stoic-northcutt-40d2cf.netlify.app/index.html)
+
+<br/>
 
 ## Documentación 📃
 
 _La documentación completa de este proyecto se encuentra en drive mediante el siguiente link_
 
 * [Documentación](https://docs.google.com/document/d/1njgqa94COHIL4qDd9gDQzQOmctfZPfvJfSWw7Ij4rao/edit?usp=sharing) - Aquí puedes descargar la documentación.
+
+<br/>
+
+## Imágenes 💻
+<br/>
+
+_Modulo General_
+
+![IA_app](https://raw.githubusercontent.com/EliasBautista/LogicaDifusa_IA/main/img/IA1.png)
+
+_Resultado del Modulo General_
+![IA_app](https://raw.githubusercontent.com/EliasBautista/LogicaDifusa_IA/main/img/IA2.png)
+
+_Modulo Específico (se agrega la opción de elegir enfermedades)_
+
+![IA_app](https://raw.githubusercontent.com/EliasBautista/LogicaDifusa_IA/main/img/IA3.png)
+
+_Resultado del Modulo Específico (otorga una ponderación acorde a las enfermedades que dió el usuario)_
+![IA_app](https://raw.githubusercontent.com/EliasBautista/LogicaDifusa_IA/main/img/IA4.png)
+
+<br/>
+<br/>
 
 ## ¿Quienes son los integrantes?
 
