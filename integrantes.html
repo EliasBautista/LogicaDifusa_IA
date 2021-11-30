@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/content.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="icon" href="img/ia_logo.png">
+	<title>Proyecto Final: IA</title>
+</head>
+
+<body>
+
+	<div class="sidebar close">
+		<div class="logo-details">
+			<i class='bx bx-brain'></i>
+			<span class="logo_name">IA</span>
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">
+					<i class='bx bx-book'></i>
+					<span class="link_name">Modulo General</span>
+				</a>
+				<ul class="sub-menu blank">
+					<li><a class="link_name" href="index.html">Modulo General</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="modEspecifico.html">
+					<i class='bx bx-book-bookmark'></i>
+					<span class="link_name">Modulo Específo</span>
+				</a>
+				<ul class="sub-menu blank">
+					<li><a class="link_name" href="modEspecifico.html">Modulo Específo</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-cool'></i>
+					<span class="link_name">Integrantes</span>
+				</a>
+				<ul class="sub-menu blank">
+					<li><a class="link_name" href="#">Integrantes</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<section class="home-section">
+		<div class="home-content">
+			<i class='bx bx-menu'></i>
+			<span class="text">Diagnóstico de enfermedades respiratorias aplicando Lógica Difusa</span>
+		</div>
+		<section class="contenido">
+			<h1>Integrantes:</h1>
+			<img src="img/brain.png" alt="brain" style="position: fixed; height: 300px; right: 500px; top: 360px;">
+			<div style="display: flex; flex-direction: row; margin-top: 100px;">
+				<img src="img/hacker.png" alt="elias" style="height: 100px; width: 100px;">
+				<div style="display: flex; flex-direction: column; text-align: center;">
+					<p style="margin-bottom: 15px;">Hugo Elias Bautista Flores</p>
+					<p>244602</p>
+				</div>
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-top: 100px;">
+				<img src="img/man.png" alt="elias" style="height: 100px; width: 100px;">
+				<div style="display: flex; flex-direction: column; text-align: center;">
+					<p style="margin-bottom: 15px;">Sergio José Vázquez Aguayo</p>
+					<p>278815</p>
+				</div>
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-top: 100px;">
+				<img src="img/young-man.png" alt="elias" style="height: 100px; width: 100px;">
+				<div style="display: flex; flex-direction: column; text-align: center;">
+					<p style="margin-bottom: 15px;">Saúl Manuel Coronel Garfias</p>
+					<p>278811</p>
+				</div>
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-top: 100px;">
+				<img src="img/brwman.png" alt="elias" style="height: 100px; width: 100px;">
+				<div style="display: flex; flex-direction: column; text-align: center;">
+					<p style="margin-bottom: 15px;">Hugo Gómez Hernández</p>
+					<p>278818</p>
+				</div>
+			</div>
+		</section>
+	</section>
+	<script src="js/modGral.js"></script>
+	<script>
+		let arrow = document.querySelectorAll(".arrow");
+		for (var i = 0; i < arrow.length; i++) {
+			arrow[i].addEventListener("click", (e) => {
+				let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+				arrowParent.classList.toggle("showMenu");
+			});
+		}
+		let sidebar = document.querySelector(".sidebar");
+		let sidebarBtn = document.querySelector(".bx-menu");
+		console.log(sidebarBtn);
+		sidebarBtn.addEventListener("click", () => {
+			sidebar.classList.toggle("close");
+		});
+
+		const inputs = document.querySelectorAll('input');
+
+		inputs.forEach(el => {
+			el.addEventListener('blur', e => {
+				if (e.target.value) {
+					e.target.classList.add('dirty');
+				} else {
+					e.target.classList.remove('dirty');
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
